@@ -1,0 +1,1 @@
+# huaweicloud-sample-rms-sync-resources-golang
