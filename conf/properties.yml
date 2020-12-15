@@ -1,0 +1,36 @@
+# Domain configuration
+domain:
+  domainId: "***"
+  ak: "***"
+  sk: "***"
+
+# RMS configuration
+rms:
+  endpoint: "https://rms.myhuaweicloud.com"
+  resourceTypes:
+    - vpc.vpcs
+    - vpc.bandwidths
+    - vpc.securityGroups
+    - vpc.publicips
+    - ecs.cloudservers
+    - evs.volumes
+  limit: 100
+
+# SMN configuration
+smn:
+  items:
+    - regionId: cn-east-3
+      endpoint: "https://smn.cn-east-3.myhuaweicloud.com:443"
+
+# Mysql
+mysql:
+  username: "root"
+  password: "***"
+  network: "tcp"
+  server: "localhost"
+  port: 3306
+  database: "rms"
+
+# Sync
+sync:
+  spec: "@every 24h"
