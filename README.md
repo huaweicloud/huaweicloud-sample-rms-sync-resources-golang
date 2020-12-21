@@ -93,7 +93,7 @@ You may be concerned that two atypical scenarios, message loss and message disor
 
 ##### Message loss
 
-Let's take a resource as an example and not consider message disorder for now, we will show you how to ensure concurrency when different event types of its **ResourceChanged** notification are lost.
+Let's take a resource as an example and not consider message disorder for now, we will show you how to ensure consistency when different event types of its **ResourceChanged** notification are lost.
 
 | event type | whether it is the last notification? | how to ensure concurrency?                            |
 | ---------- | :----------------------------------: | ----------------------------------------------------- |
@@ -107,7 +107,7 @@ Let's take a resource as an example and not consider message disorder for now, w
 
 As we all know, among many ResourceChanged notifications of a resource, there will only be one **CREATE** notification, at most one **DELETE** notification and many **UPDATE** notifications.
 
-Let's take a resource as an example and not consider message loss for now, we will show you how to ensure concurrency when **ResourceChanged** notifications are disordered.
+Let's take a resource as an example and not consider message loss for now, we will show you how to ensure consistency when **ResourceChanged** notifications are disordered.
 
 - **We use C, U, D to stand for CREATE, UPDATE and DELETE.**
 
